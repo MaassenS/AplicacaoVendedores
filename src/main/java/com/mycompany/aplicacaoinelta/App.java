@@ -1,4 +1,4 @@
-package com.mycompany.aplicacaovendedores;
+package com.mycompany.aplicacaoinelta;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +9,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
- * JavaFX App
+ * Sistema Inelta - Gestão de Produtos e Análise de Lucros
+ * Aplicação JavaFX para gerenciamento de produtos pneumáticos da Inelta
+ *
+ * @author Sistema Inelta
  */
 public class App extends Application {
 
@@ -17,8 +20,10 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("TelaPrincipal"), 640, 480);
+        scene = new Scene(loadFXML("TelaPrincipalInelta"), 350, 280);
+        stage.setTitle("Sistema Inelta - Gestão de Produtos e Lucros");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 
@@ -34,5 +39,4 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
-
 }

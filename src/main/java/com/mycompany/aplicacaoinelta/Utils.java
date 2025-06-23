@@ -1,4 +1,4 @@
-package com.mycompany.aplicacaovendedores;
+package com.mycompany.aplicacaoinelta;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -75,7 +75,7 @@ public class Utils {
 
     public static void setTextFieldDouble(TextField txt) {
         txt.textProperty().addListener((obs, oldValue, newValue) -> {
-            if (newValue != null && !newValue.matches("\\d*([\\"+getSeparadorDecimal()+"]\\d*)?")) {
+            if (newValue != null && !newValue.matches("\\d*(["+getSeparadorDecimal()+"]\\d*)?")) {
                 txt.setText(oldValue);
             }
         });

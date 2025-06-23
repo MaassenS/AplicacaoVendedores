@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.aplicacaoinelta.TelaDashboardController">
+    <children>
+        <BorderPane prefHeight="700.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <VBox prefHeight="80.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="1000.0" text="Dashboard de Análise de Lucros - Sistema Inelta" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="1000.0" spacing="10.0">
+                            <children>
+                                <Label text="Período:" />
+                                <ComboBox fx:id="cmbPeriodo" prefWidth="120.0" promptText="Mês/Ano" />
+                                <Button fx:id="btnAtualizar" mnemonicParsing="false" onAction="#onBtnAtualizarAction" text="Atualizar" />
+                                <Button fx:id="btnExportar" mnemonicParsing="false" onAction="#onBtnExportarAction" text="Exportar" />
+                                <Button fx:id="btnVoltar" mnemonicParsing="false" onAction="#onBtnVoltarAction" text="Voltar" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </top>
+            <center>
+                <ScrollPane fitToWidth="true" prefHeight="620.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+                    <content>
+                        <VBox prefHeight="600.0" prefWidth="980.0" spacing="10.0">
+                            <children>
+                                <!-- Seção de Resumo Financeiro -->
+                                <Label text="Resumo Financeiro" textFill="#2e74b5">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Label>
+                                <GridPane hgap="15.0" prefHeight="100.0" prefWidth="980.0" vgap="10.0">
+                                    <children>
+                                        <VBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #e6f3ff; -fx-border-color: #2e74b5; -fx-border-radius: 5; -fx-background-radius: 5;">
+                                            <children>
+                                                <Label text="Receita Total" textFill="#2e74b5">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="lblReceitaTotal" text="R$ 0,00" textFill="#2e74b5">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </VBox>
+                                        <VBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #e8f5e8; -fx-border-color: #27ae60; -fx-border-radius: 5; -fx-background-radius: 5;" GridPane.columnIndex="1">
+                                            <children>
+                                                <Label text="Lucro Total" textFill="#27ae60">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="lblLucroTotal" text="R$ 0,00" textFill="#27ae60">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </VBox>
+                                        <VBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #fff3e0; -fx-border-color: #ff9800; -fx-border-radius: 5; -fx-background-radius: 5;" GridPane.columnIndex="2">
+                                            <children>
+                                                <Label text="Margem Média" textFill="#ff9800">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="lblMargemMedia" text="0,00%" textFill="#ff9800">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </VBox>
+                                        <VBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #f3e5f5; -fx-border-color: #9c27b0; -fx-border-radius: 5; -fx-background-radius: 5;" GridPane.columnIndex="3">
+                                            <children>
+                                                <Label text="Produtos Vendidos" textFill="#9c27b0">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="lblQuantidadeVendida" text="0" textFill="#9c27b0">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                           <columnConstraints>
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints />
+                           </rowConstraints>
+                                </GridPane>
+
+                                <!-- Seção de Top Produtos -->
+                                <Label text="Top 10 Produtos Mais Vendidos" textFill="#2e74b5">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets top="20.0" />
+                                    </VBox.margin>
+                                </Label>
+                                <TableView fx:id="tableViewTopProdutos" prefHeight="200.0" prefWidth="980.0">
+                                    <columns>
+                                        <TableColumn fx:id="tableColumnRanking" prefWidth="50.0" text="Pos." />
+                                        <TableColumn fx:id="tableColumnLinhaProduto" prefWidth="80.0" text="Linha" />
+                                        <TableColumn fx:id="tableColumnQuantVendida" prefWidth="80.0" style="-fx-alignment: CENTER;" text="Qtd Vendida" />
+                                        <TableColumn fx:id="tableColumnReceitaProduto" prefWidth="100.0" style="-fx-alignment: CENTER-RIGHT;" text="Receita R$" />
+                                        <TableColumn fx:id="tableColumnLucroProduto" prefWidth="100.0" style="-fx-alignment: CENTER-RIGHT;" text="Lucro R$" />
+                                        <TableColumn fx:id="tableColumnMargemProduto" prefWidth="80.0" style="-fx-alignment: CENTER-RIGHT;" text="Margem %" />
+                                        <TableColumn fx:id="tableColumnProdutoNome" prefWidth="250.0" text="Produto" />
+                                    </columns>
+                                </TableView>
+
+                                <!-- Seção de Análise por Linha -->
+                                <Label text="Análise por Linha de Produto" textFill="#2e74b5">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets top="20.0" />
+                                    </VBox.margin>
+                                </Label>
+                                <TableView fx:id="tableViewAnaliseLinha" prefHeight="150.0" prefWidth="980.0">
+                                    <columns>
+                                        <TableColumn fx:id="tableColumnLinha" prefWidth="100.0" text="Linha" />
+                                        <TableColumn fx:id="tableColumnQtdProdutos" prefWidth="100.0" style="-fx-alignment: CENTER;" text="Produtos" />
+                                        <TableColumn fx:id="tableColumnQtdVendasLinha" prefWidth="100.0" style="-fx-alignment: CENTER;" text="Qtd Vendas" />
+                                        <TableColumn fx:id="tableColumnReceitaLinha" prefWidth="120.0" style="-fx-alignment: CENTER-RIGHT;" text="Receita R$" />
+                                        <TableColumn fx:id="tableColumnLucroLinha" prefWidth="120.0" style="-fx-alignment: CENTER-RIGHT;" text="Lucro R$" />
+                                        <TableColumn fx:id="tableColumnMargemLinha" prefWidth="100.0" style="-fx-alignment: CENTER-RIGHT;" text="Margem %" />
+                                        <TableColumn fx:id="tableColumnParticipacao" prefWidth="100.0" style="-fx-alignment: CENTER-RIGHT;" text="Participação %" />
+                                    </columns>
+                                </TableView>
+
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                        </VBox>
+                    </content>
+                </ScrollPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

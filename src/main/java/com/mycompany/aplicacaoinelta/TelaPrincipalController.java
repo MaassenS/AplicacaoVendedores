@@ -1,8 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
-package com.mycompany.aplicacaovendedores;
+package com.mycompany.aplicacaoinelta;
 
 import java.io.IOException;
 import java.net.URL;
@@ -19,16 +15,16 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author herrmann
+ * @author Sistema Inelta
  */
 public class TelaPrincipalController implements Initializable {
 
     @FXML
-    private Button btnVendedores;
-
+    private Button btnProdutos;
     @FXML
-    private Button btnDepartamentos;
-
+    private Button btnDashboard;
+    @FXML
+    private Button btnRelatorios;
     @FXML
     private Button btnSair;
 
@@ -37,35 +33,48 @@ public class TelaPrincipalController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        btnVendedores.setOnAction((t) -> {
+        btnProdutos.setOnAction((t) -> {
             try {
-                Parent parent = FXMLLoader.load(getClass().getResource("TelaVendedores.fxml"));
+                Parent parent = FXMLLoader.load(getClass().getResource("TelaProdutos.fxml"));
                 Scene scene = new Scene(parent);
                 Stage stage = new Stage();
-                stage.setTitle("Consulta de Vendedores");
+                stage.setTitle("Gestão de Produtos - Sistema Inelta");
                 stage.setScene(scene);
                 stage.show();
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
         });
-        btnDepartamentos.setOnAction((t) -> {
+
+        btnDashboard.setOnAction((t) -> {
             try {
-                Parent parent = FXMLLoader.load(getClass().getResource("TelaDepartamentos.fxml"));
+                Parent parent = FXMLLoader.load(getClass().getResource("TelaDashboard.fxml"));
                 Scene scene = new Scene(parent);
                 Stage stage = new Stage();
-                stage.setTitle("Consulta de Departamentos");
+                stage.setTitle("Dashboard de Lucros - Sistema Inelta");
                 stage.setScene(scene);
                 stage.show();
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
         });
+
+        btnRelatorios.setOnAction((t) -> {
+            try {
+                Parent parent = FXMLLoader.load(getClass().getResource("TelaRelatorios.fxml"));
+                Scene scene = new Scene(parent);
+                Stage stage = new Stage();
+                stage.setTitle("Relatórios de Vendas - Sistema Inelta");
+                stage.setScene(scene);
+                stage.show();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        });
+
         btnSair.setOnAction((t) -> {
             Stage stage = (Stage) btnSair.getScene().getWindow();
-            // do what you have to do
             stage.close();
         });
     }
-
 }

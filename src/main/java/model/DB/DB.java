@@ -14,7 +14,7 @@ public class DB {
 
     public static Connection getConnection() {
         try {
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/vendedores",
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/inelta_sistema",
                     "root",
                     "123456");
             return con;
