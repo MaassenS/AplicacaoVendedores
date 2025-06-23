@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="309.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.aplicacaovendedores.TelaCadastroVendedorController">
+   <children>
+      <GridPane hgap="5.0" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefHeight="267.0" prefWidth="564.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0" prefWidth="99.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="293.0" minWidth="10.0" prefWidth="213.0" />
+            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="258.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="20.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="20.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="20.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="20.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="20.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="20.0" vgrow="ALWAYS" />
+         </rowConstraints>
+         <children>
+            <Label alignment="CENTER_RIGHT" text="Código:" GridPane.halignment="RIGHT" />
+            <Label alignment="CENTER_RIGHT" text="Nome:" textAlignment="CENTER" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <TextField fx:id="txtCodigo" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txtNome" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="lblErroData" maxWidth="1.7976931348623157E308" textFill="#d30404" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblErroSalario" textFill="#d30404" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblErroDepartamento" textFill="#d30404" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Nascimento:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <Label text="Salário Base:" GridPane.rowIndex="3" />
+            <Label text="Departamento:" GridPane.rowIndex="4" />
+            <DatePicker fx:id="dateNascimento" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <TextField fx:id="txtSalario" alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ComboBox fx:id="cmbDepartamento" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="195.0" promptText="Selecione..." GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" />
+            <Label fx:id="lblErroNome" textFill="#d30404" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="9.0" prefWidth="197.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <Button fx:id="btnSalvar" mnemonicParsing="false" text="Salvar" />
+                  <Button fx:id="btnSair" mnemonicParsing="false" text="Sair" />
+               </children>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </GridPane>
+   </children>
+</AnchorPane>
