@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="380.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.aplicacaoinelta.TelaCadastroProdutoController">
+   <children>
+      <GridPane hgap="5.0" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefHeight="340.0" prefWidth="630.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="220.0" />
+            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="290.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="20.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="20.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="20.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="20.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="20.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="20.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="20.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="20.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="20.0" vgrow="ALWAYS" />
+         </rowConstraints>
+         <children>
+            <Label alignment="CENTER_RIGHT" text="ID:" GridPane.halignment="RIGHT" />
+            <Label alignment="CENTER_RIGHT" text="Código:" textAlignment="CENTER" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <TextField fx:id="txtId" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txtCodigo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="lblErroCodigo" maxWidth="1.7976931348623157E308" textFill="#d30404" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblErroNome" textFill="#d30404" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblErroLinha" textFill="#d30404" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblErroCusto" textFill="#d30404" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblErroVenda" textFill="#d30404" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblErroPeso" textFill="#d30404" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label text="Nome do Produto:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <Label text="Linha:" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <Label text="Preço de Custo:" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+            <Label text="Preço de Venda:" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+            <Label text="Peso (kg):" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+            <Label text="Produto Ativo:" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+            <TextField fx:id="txtNome" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="cmbLinha" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="220.0" promptText="Selecione a linha..." GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" />
+            <TextField fx:id="txtCusto" alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtVenda" alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="txtPeso" alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <CheckBox fx:id="chkAtivo" mnemonicParsing="false" selected="true" text="Sim" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <HBox prefHeight="9.0" prefWidth="220.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <children>
+                  <Button fx:id="btnSalvar" mnemonicParsing="false" prefWidth="70.0" text="Salvar" />
+                  <Button fx:id="btnSair" mnemonicParsing="false" prefWidth="70.0" text="Sair" />
+               </children>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </GridPane>
+   </children>
+</AnchorPane>

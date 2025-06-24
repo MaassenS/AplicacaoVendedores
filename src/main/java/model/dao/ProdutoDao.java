@@ -45,11 +45,10 @@ public class ProdutoDao {
                         res.getDouble("precoCusto"),
                         res.getDouble("precoVenda"),
                         res.getDouble("peso_kg"),
-                        res.getBoolean("ativo"),
-                        res.getTimestamp("data_cadastro").toLocalDateTime()
+                        res.getBoolean("ativo")
                 );
 
-                System.out.println(produto.toString2());
+                System.out.println(produto.toString());
                 list.add(produto);
             }
 
@@ -195,8 +194,7 @@ public class ProdutoDao {
                         res.getDouble("precoCusto"),
                         res.getDouble("precoVenda"),
                         res.getDouble("peso_kg"),
-                        res.getBoolean("ativo"),
-                        res.getTimestamp("data_cadastro").toLocalDateTime()
+                        res.getBoolean("ativo")
                 );
 
                 list.add(produto);
@@ -237,8 +235,7 @@ public class ProdutoDao {
                         res.getDouble("precoCusto"),
                         res.getDouble("precoVenda"),
                         res.getDouble("peso_kg"),
-                        res.getBoolean("ativo"),
-                        res.getTimestamp("data_cadastro").toLocalDateTime()
+                        res.getBoolean("ativo")
                 );
 
                 list.add(produto);

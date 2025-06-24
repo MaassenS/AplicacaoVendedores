@@ -1,5 +1,7 @@
 package model.classes;
 
+import java.time.LocalDateTime;
+
 public class Produto {
     private int id;
     private String codigo;
